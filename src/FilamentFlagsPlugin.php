@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Andromde\FilamentFlags;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class FilamentFlagsPlugin implements Plugin
 {
     public function getId(): string
     {

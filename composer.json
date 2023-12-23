@@ -1,21 +1,13 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
-    "keywords": [
-        ":vendor_name",
-        "laravel",
-        ":package_slug"
-    ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
-    "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
-    },
+    "name": "andromede/filament-flags",
+    "description": "A Laravel Filament component to display countries or languages by flags",
+    "keywords": ["andromede", "laravel", "filament", "filament-flags"],
+    "homepage": "https://github.com/lguichard/filament-flags",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Lionel Guichard",
+            "email": "lionel.guichard@gmail.com",
             "role": "Developer"
         }
     ],
@@ -42,21 +34,17 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Andromede\\FilamentFlags\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Andromede\\FilamentFlags\\Tests\\": "tests/"
         }
     },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "test": "vendor/bin/pest"
     },
     "config": {
         "sort-packages": true,
@@ -68,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Andromede\\FilamentFlags\\FilamentFlagsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentFlags": "Andromede\\FilamentFlags\\Facades\\FilamentFlags"
             }
         }
     },

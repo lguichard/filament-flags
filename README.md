@@ -22,7 +22,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require lguichard/filament-flags
 ```
 
 You can publish and run the migrations with:
