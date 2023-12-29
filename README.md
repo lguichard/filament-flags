@@ -1,76 +1,62 @@
-# :package_description
+# Filament Flags
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Total Downloads](https://img.shields.io/packagist/dt/andromede/filament-flags.svg?style=flat-square)](https://packagist.org/packages/andromede/filament-flags)
 
-<!--delete-->
----
-This repo can be used to scaffold a Filament plugin. Follow these steps to get started:
+> [!CAUTION]
+> This branch is Work In Progress and should not be considered production-ready.
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Make something great!
----
-<!--/delete-->
+## TODO
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+- [ ] Form : Select, TextInput (prefix)
+- [ ] Entry : IconEntry / ImageEntry
+- [ ] Column : IconColumn / SelectColumn
+- [ ] SelectInput
+- [ ] MultiSelectInput (tags)
+- [ ] Documentation
 
 ## Installation
 
-You can install the package via composer:
+Install the plugin with Composer:
 
 ```bash
-composer require lguichard/filament-flags
+composer require andromede/filament-flags:"^1.0" -W
 ```
 
-You can publish and run the migrations with:
+## Form component
 
-```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag=":package_slug-views"
-```
-
-This is the contents of the published config file:
+To use the flags form:
 
 ```php
-return [
-];
+use Andromede\FilamentFlags\Components\Forms\FlagsInput;
+
+FlagsInput::make('flag')
+    >size('small') // small, medium, large
+
 ```
 
-## Usage
+## Table column
+
+To use the flags column:
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+use Andromede\FilamentFlags\Components\Columns\FlagsIconColumn;
+
+FlagsIconColumn::make('flag')
+    ->size('small') // small, medium, large
+
 ```
 
-## Testing
+## Infolist entry
 
-```bash
-composer test
+To use the flags entry:
+
+```php
+use Andromede\FilamentFlags\Infolists\Components\FlagsEntry;
+
+FlagsEntry::make('flag')
+    ->size('small') // small, medium, large
+
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
@@ -78,7 +64,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Lionel Guichard](https://github.com/lguichard)
 - [All Contributors](../../contributors)
 
 ## License
