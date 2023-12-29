@@ -11,7 +11,7 @@ class FlagsColumn extends Column
 
     public string $code = 'fr';
 
-    public string $country = "us";
+    public string $country = 'us';
 
     public string $size = '';
 
