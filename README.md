@@ -5,6 +5,8 @@
 > [!CAUTION]
 > This branch is Work In Progress and should not be considered production-ready.
 
+For a full list of available flags see the SVG directory.
+
 ## TODO
 
 - [ ] Form : Select, TextInput (prefix)
@@ -19,10 +21,12 @@
 Install the plugin with Composer:
 
 ```bash
-composer require andromede/filament-flags:"^1.0" -W
+composer require andromede/filament-flags:"^1.0"
 ```
 
-## Form component
+## Usage
+
+### Form component
 
 To use the flags form:
 
@@ -34,7 +38,7 @@ FlagsInput::make('flag')
 
 ```
 
-## Table column
+### Table column
 
 To use the flags column:
 
@@ -46,7 +50,7 @@ FlagsIconColumn::make('flag')
 
 ```
 
-## Infolist entry
+### Infolist entry
 
 To use the flags entry:
 
@@ -55,6 +59,16 @@ use Andromede\FilamentFlags\Infolists\Components\FlagsEntry;
 
 FlagsEntry::make('flag')
     ->size('small') // small, medium, large
+
+```
+
+### Blade template
+
+```php
+
+<x-icon name="flag-country-{{ $code }}" />
+
+<x-icon name="flag-language-{{ $code }}" />
 
 ```
 

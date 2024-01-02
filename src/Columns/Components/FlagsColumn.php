@@ -7,11 +7,11 @@ use Illuminate\View\View;
 
 class FlagsColumn extends Column
 {
-    protected string $view = 'andromede-filament-flags::columns.components.flag';
+    protected string $view = 'filament-flags::columns.components.flag';
 
     public string $code = 'fr';
 
-    public string $country = 'us';
+    public string $country = '';
 
     public string $size = '';
 
